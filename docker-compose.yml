@@ -4,6 +4,7 @@ services:
   api:
     build: .
     volumes: &api-volumes
+      - .:/app:cached
       - ~/.ssh:/root/.ssh
       - ~/.bash_history:/root/.bash_history
     ports:
